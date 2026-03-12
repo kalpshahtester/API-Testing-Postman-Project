@@ -1,25 +1,11 @@
-API TESTING PROJECT – MODULE 10
+# API Test Cases
 
-TC01 – User Registration
-Method: POST
-Endpoint: /userreg
-
-TC02 – User Login
-Method: POST
-Endpoint: /userlogin
-
-TC03 – Admin Login
-Method: POST
-Endpoint: /alogin
-
-TC04 – Add Category
-Method: POST
-Endpoint: /addcategory
-
-TC05 – View Category
-Method: GET
-Endpoint: /category
-
-TC06 – Delete Category
-Method: GET
-Endpoint: /deletecat?id=
+| TC ID | API Name          | Method | Endpoint     | Request Body / Params                   | Expected Result               | Status |
+| ----- | ----------------- | ------ | ------------ | --------------------------------------- | ----------------------------- | ------ |
+| TC01  | User Registration | POST   | /userreg     | fname, lname, email, phno, pass, gender | User registered successfully  | Pass   |
+| TC02  | User Login        | POST   | /userlogin   | email, pass                             | User auth token generated     | Pass   |
+| TC03  | Admin Login       | POST   | /alogin      | email, password                         | Admin token generated         | Pass   |
+| TC04  | Add Category      | POST   | /addcategory | catname                                 | Category added successfully   | Pass   |
+| TC05  | View Category     | GET    | /category    | Admin token header                      | Category list displayed       | Pass   |
+| TC06  | Delete Category   | GET    | /deletecat   | id parameter                            | Category deleted successfully | Pass   |
+| TC07  | Invalid Login     | POST   | /userlogin   | wrong email/password                    | Login should fail             | Pass   |
